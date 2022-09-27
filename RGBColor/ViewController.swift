@@ -10,7 +10,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
+    //MARK - IBOutlet
     @IBOutlet var VIew: UIView!
     
     @IBOutlet var redLB: UILabel!
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         redLB.text = string(from: redSlider)
         greenLB.text = string(from: greenSlider)
         blueLB.text = string(from: blueSlider)
+        print("Hello world")
     }
     
     private func setColor() {
