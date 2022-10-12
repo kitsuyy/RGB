@@ -10,7 +10,9 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    //MARK - IBOutlet
+   
+    // MARK: - IB Outlets
+    
     @IBOutlet var VIew: UIView!
     
     @IBOutlet var redLB: UILabel!
@@ -27,14 +29,17 @@ class ViewController: UIViewController {
         setColor()
     }
     
+    // MARK: - Actions
     
     @IBAction func sliderAction(_ sender: UISlider) {
         setColor()
+        
         redLB.text = string(from: redSlider)
         greenLB.text = string(from: greenSlider)
         blueLB.text = string(from: blueSlider)
-        print("Hello world")
     }
+    
+    // MARK: - Private Metods
     
     private func setColor() {
         VIew.backgroundColor = UIColor(
