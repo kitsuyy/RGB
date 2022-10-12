@@ -9,11 +9,11 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class SettingViewController: UIViewController {
    
     // MARK: - IB Outlets
     
-    @IBOutlet var VIew: UIView!
+    @IBOutlet var rgbView: UIView!
     
     @IBOutlet var redLB: UILabel!
     @IBOutlet var greenLB: UILabel!
@@ -23,10 +23,18 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    // MARK: - Delegate
+
+    var mainViewColor: UIColor!
+    var delegate: SetMainViewControllerDelegate!
+    
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        VIew.layer.cornerRadius = 20
+        rgbView.layer.cornerRadius = 20
         setColor()
+        setupValue()
     }
     
     // MARK: - Actions
@@ -39,10 +47,21 @@ class ViewController: UIViewController {
         blueLB.text = string(from: blueSlider)
     }
     
+    
+    @IBAction func DidButtonDidPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+        delegate.setColor(rgbView.backgroundColor ?? .white)
+    }
+    
     // MARK: - Private Metods
+    private func setupValue() {
+        redLB.text = string(from: redSlider)
+        greenLB.text = string(from: greenSlider)
+        blueLB.text = string(from: blueSlider)
+    }
     
     private func setColor() {
-        VIew.backgroundColor = UIColor(
+        rgbView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
@@ -53,4 +72,5 @@ class ViewController: UIViewController {
         String(format: "%.2f", slider.value)
     }
 }
+
     
