@@ -26,7 +26,7 @@ class SettingViewController: UIViewController {
     // MARK: - Delegate
 
     var mainViewColor: UIColor!
-    var delegate: SetMainViewControllerDelegate!
+    var delegate: SettingViewControllerDelegate!
     
     // MARK: - ViewDidLoad
     

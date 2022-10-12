@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SetMainViewControllerDelegate {
+protocol SettingViewControllerDelegate {
     func setColor(_ color: UIColor)
 }
 
@@ -21,8 +21,8 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - SettingsViewControllerDelegate
-extension MainViewController: SetMainViewControllerDelegate {
+// MARK: - SettingViewControllerDelegate
+extension MainViewController: SettingViewControllerDelegate {
     func setColor(_ color: UIColor) {
         view.backgroundColor = color
     }
