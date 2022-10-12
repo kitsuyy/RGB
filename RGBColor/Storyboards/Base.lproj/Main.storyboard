@@ -180,7 +180,7 @@
                         <outlet property="greenSlider" destination="gIl-UK-W4x" id="a6b-ni-bDE"/>
                         <outlet property="redLB" destination="yxe-WG-mAt" id="Rwn-jk-NHL"/>
                         <outlet property="redSlider" destination="uUH-yG-bxt" id="Ty8-f0-xL5"/>
-                        <outlet property="view" destination="niw-39-waz" id="rcP-Av-94i"/>
+                        <outlet property="rgbView" destination="niw-39-waz" id="xM9-nz-yfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
